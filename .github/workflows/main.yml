@@ -6,9 +6,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    # defaults:
-    #   run:
-    #     working-directory: '.'
+    defaults:
+      run:
+        working-directory: '.'
 
     steps:
       - name: Login to GitHub Container Registry
@@ -26,8 +26,6 @@ jobs:
       
       - name: 'Build Inventory Image'
         run: |
-              pwd
-              ls
               docker build . --tag ghcr.io/bgermano1/nestjs:latest
               docker push ghcr.io/bgermano1/nestjs:latest
           
