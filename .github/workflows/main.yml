@@ -53,6 +53,7 @@ jobs:
           port: ${{ secrets.PORT }}
           script: |
             docker pull ghcr.io/bgermano1/nestjs:latest
+            docker rm -f $(docker ps -q --filter "publish=3000")
             docker run -d -p 3000:3000 ghcr.io/bgermano1/nestjs:latest
 
       - name: ZAP Scan
