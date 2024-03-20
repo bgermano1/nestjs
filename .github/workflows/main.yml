@@ -52,5 +52,5 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            whoami
-            ls -la
+            docker pull ghcr.io/bgermano1/nestjs:latest
+            docker run -d -p 3000:3000 ghcr.io/bgermano1/nestjs:latest
