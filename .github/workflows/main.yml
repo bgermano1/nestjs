@@ -43,3 +43,14 @@ jobs:
           vuln-type: 'os,library'
           severity: 'HIGH, CRITICAL'
         continue-on-error: true
+
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            whoami
+            ls -la
