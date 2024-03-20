@@ -27,6 +27,7 @@ jobs:
       - name: 'Build Inventory Image'
         run: |
               pwd
+              ls
               docker build . --tag ghcr.io/bgermano1/nestjs:latest
               docker push ghcr.io/bgermano1/nestjs:latest
           
