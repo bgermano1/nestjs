@@ -1,0 +1,33 @@
+# Ignora a pasta node_modules, que contém as dependências instaladas
+node_modules/
+
+# Ignora os arquivos de log
+*.log
+
+# Ignora arquivos de compilação
+/dist
+
+# Ignora o arquivo .env que pode conter variáveis de ambiente sensíveis
+.env
+
+# Ignora os arquivos de configuração de IDE
+.idea/
+.vscode/
+
+# Ignora arquivos de build
+.DS_Store
+*.pid
+*.seed
+*.pid.lock
+
+# Ignora o arquivo de cache do Jest
+/.jest
+
+# Ignora os arquivos de cobertura de teste
+/coverage
+
+# Ignora os arquivos de compilação TypeScript
+*.js.map
+
+# Ignora os arquivos de build do TypeScript
+*.js
